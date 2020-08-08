@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".BilibiliCoversActivity"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_bilibili"
+            app:title="@string/title_bilibili_cover"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+    <EditText
+        android:id="@+id/et_video_id"
+        style="@style/editview"
+        android:layout_height="45sp"
+        android:hint="@string/video_id_hint"
+        android:singleLine="true"
+        />
+    <Button
+        android:id="@+id/btn_get"
+        style="@style/ButtonRound"
+        android:text="@string/get"
+        />
+    <LinearLayout
+        android:id="@+id/layout_save_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        >
+        <Button
+            android:id="@+id/btn_save_img"
+            style="@style/ButtonRoundBorder"
+            android:text="@string/save_cover"/>
+        <ImageView
+            android:id="@+id/img_video_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"/>
+    </LinearLayout>
+
+</LinearLayout>

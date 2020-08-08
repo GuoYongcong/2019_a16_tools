@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <Button
+        android:id="@+id/back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@mipmap/back"/>
+    <TextView
+        android:id="@+id/lv"
+        style="@style/textStyle"
+        android:layout_marginTop="90dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:text="@string/network" />
+    <LinearLayout
+        android:id="@+id/le"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lv"
+        android:orientation="vertical"
+        android:layout_marginTop="70dp">
+        <EditText
+            android:id="@+id/account"
+            style="@style/editviewStyle"
+            android:hint="@string/account" />
+
+        <EditText
+            android:id="@+id/password"
+            style="@style/editviewStyle"
+            android:password="true"
+            android:hint="@string/password" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/le"
+        android:paddingBottom="30dp"
+
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/login"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/go_to_link" />
+
+        <Button
+            android:id="@+id/forgoten"
+            style="@style/buttonStyle"
+            android:text="@string/forgot"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="60dp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/change"
+            style="@style/buttonStyle"
+            android:text="@string/register"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

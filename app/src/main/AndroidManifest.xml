@@ -1,24 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.dingdangpocket">
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions"/>
     <application
         android:allowBackup="true"
+        android:fitsSystemWindows="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
         android:theme="@style/AppTheme">
+        <activity android:name=".time"></activity>
+        <activity android:name=".BilibiliCoversActivity"></activity>
+
+        <provider
+            android:authorities="com.example.dingdangpocket.fileProvider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities"
+            >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/mis_provider_paths"
+                tools:replace="android:resource"
+                />
+
+        </provider>
+        <activity android:name=".HistoryTodayActivity"></activity>
+        <activity android:name=".ColorPickerActivity" ></activity>
+        <activity android:name="com.example.dingdangpocket.example.diary.AddActivity"></activity>
+        <activity android:name="com.example.dingdangpocket.example.diary.DiaryMainActivity"></activity>
+        <activity android:name="com.example.dingdangpocket.example.diary.ReadActivity"></activity>
+        <activity android:name="com.example.dingdangpocket.example.painting.PaintingActivity"></activity>
+        <activity android:name=".SoundActivity" />
+        <activity android:name=".RubbishClassificationActivity" />
+        <activity android:name=".RandomNumberActivity" />
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme.StartingWindowTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Userpage" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="关于" />
+        <activity android:name=".Login" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
     </application>
-
 </manifest>

@@ -17,29 +17,86 @@
 
 
         <LinearLayout
+            xmlns:zhy="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/activity_flow_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:text="btn1"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:text="btn1"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:text="btn1"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:text="btn1"/>
+            <TextView
+                style="@style/TextViewSortName"
 
+                android:drawableStart="@drawable/ic_daily"
+                android:text="@string/daily_tools" />
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/id_flowlayout_1"
+                style="@style/FlowLayout"
+                zhy:max_select="-1"
+                />
+
+            <View
+                style="@style/ViewLine"/>
+            <TextView
+                style="@style/TextViewSortName"
+                android:text="@string/photo_tools"
+                android:drawableLeft="@drawable/ic_photo"
+                />
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/id_flowlayout_2"
+                style="@style/FlowLayout"
+                zhy:max_select="-1"
+                />
+            <View
+                style="@style/ViewLine"/>
+            <TextView
+                style="@style/TextViewSortName"
+                android:text="@string/query_tools"
+                android:drawableLeft="@drawable/ic_query"
+                />
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/id_flowlayout_3"
+                style="@style/FlowLayout"
+                zhy:max_select="-1"
+                />
+
+            <View
+                style="@style/ViewLine"/>
+            <TextView
+                style="@style/TextViewSortName"
+                android:text="@string/equipment_tools"
+                android:drawableLeft="@drawable/ic_equipment"/>
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/id_flowlayout_4"
+                style="@style/FlowLayout"
+                zhy:max_select="-1"
+                />
+
+            <View
+                style="@style/ViewLine"/>
+            <TextView
+                style="@style/TextViewSortName"
+                android:text="@string/auxiliary_tools"
+                android:drawableLeft="@drawable/ic_auxiliary"/>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/id_flowlayout_5"
+                style="@style/FlowLayout"
+                zhy:max_select="-1"/>
+
+            <View
+                style="@style/ViewLine"/>
+            <TextView
+                style="@style/TextViewSortName"
+                android:text="@string/other_tools"
+                android:drawableLeft="@drawable/ic_others"
+                />
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/id_flowlayout_6"
+                style="@style/FlowLayout"
+                zhy:max_select="-1"
+                />
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
+
 </LinearLayout>

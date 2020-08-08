@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Userpage"
+    android:clipChildren="false">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:clipChildren="false"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@mipmap/back" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:clipChildren="false"
+            android:orientation="horizontal">
+
+            <com.example.dingdangpocket.XCRoundRectImageView
+                android:id="@+id/imageshow"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="-35dp"
+                android:src="@drawable/daxiong" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignTop="@+id/imageshow"
+                android:layout_toRightOf="@+id/imageshow"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="4dp"
+                android:text="野比大雄"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imageshow"
+                android:layout_marginLeft="14dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="-35dp"
+                android:text="男   本科在读"
+                android:textColor="#971B1A1A"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="4"
+       android:orientation="vertical">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1"
+           android:layout_marginTop="35dp"
+           android:orientation="vertical"
+           android:layout_marginLeft="20dp">
+           <TextView
+               xmlns:view="http://schemas.android.com/apk/res-auto"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:layout_marginTop="30dp"
+               android:drawablePadding="10dp"
+               android:drawableLeft="@drawable/ic_region"
+               android:drawableRight="@drawable/ic_arrow_right"
+               android:paddingRight="10dp"
+               android:gravity="center_vertical"
+               android:text="华南师范大学   广东-广州-天河"
+               android:textColor="#971B1A1A"
+               android:visibility="visible"/>
+           <TextView
+               xmlns:view="http://schemas.android.com/apk/res-auto"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:layout_marginTop="6dp"
+               android:drawablePadding="8dp"
+               android:drawableLeft="@drawable/ic_edit"
+               android:drawableRight="@drawable/ic_arrow_right"
+               android:paddingRight="10dp"
+               android:gravity="center_vertical"
+               android:text="@string/sign"
+               android:textColor="#971B1A1A"
+               android:visibility="visible" />
+           <TextView
+               xmlns:view="http://schemas.android.com/apk/res-auto"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:layout_marginTop="6dp"
+               android:drawablePadding="12dp"
+               android:layout_marginLeft="4dp"
+               android:drawableLeft="@drawable/ic_vip3"
+               android:drawableRight="@drawable/ic_arrow_right"
+               android:paddingRight="10dp"
+               android:gravity="center_vertical"
+               android:text="九阳神功第九重"
+               android:textColor="#971B1A1A"
+               android:visibility="visible" />
+           <TextView
+               xmlns:view="http://schemas.android.com/apk/res-auto"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:layout_marginTop="6dp"
+               android:drawablePadding="14dp"
+               android:layout_marginLeft="4dp"
+               android:drawableLeft="@drawable/ic_email2"
+               android:drawableRight="@drawable/ic_arrow_right"
+               android:paddingRight="10dp"
+               android:gravity="center_vertical"
+               android:text="1024@m.scnu.edu.cn"
+               android:textColor="#971B1A1A"
+               android:visibility="visible" />
+       </LinearLayout>
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1"
+           android:layout_marginBottom="50dp">
+
+           <Button
+               android:id="@+id/vip"
+               style="@style/Userpage_Button"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginLeft="20dp"
+               android:text="升级会员" />
+
+           <Button
+               android:id="@+id/edit_message2"
+               style="@style/Userpage_Button"
+               android:layout_centerHorizontal="true"
+               android:layout_alignParentBottom="true"
+               android:text="我的二维码" />
+
+           <Button
+               android:id="@+id/edit_message"
+               style="@style/Userpage_Button"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginRight="20dp"
+               android:text="编辑资料" />
+       </RelativeLayout>
+   </LinearLayout>
+
+</LinearLayout>
